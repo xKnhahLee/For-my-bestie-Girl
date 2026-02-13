@@ -1,0 +1,79 @@
+    body {
+        margin: 0;
+        height: 100vh;
+        background: #ff8ca3;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+    }
+
+    /* BỨC THƯ */
+    .letter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 400px;
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        z-index: 10;
+    }
+
+    .letter h2 {
+        color: #ff4d6d;
+        text-align: center;
+    }
+
+    .letter p {
+        width: 580px;
+        height: 230px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        resize: none;
+    }
+
+    .letter h5 {
+    background-size: cover;
+    border: 3px dashed #ff85a2;
+    border-radius: 12px;
+    padding: 10px;
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px 0;
+}
+    .letter h5 a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* ẢNH BAY */
+    .heart {
+        position: absolute;
+        bottom: -100px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        object-fit: cover;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .bay {
+        animation: baylen 8s linear forwards;
+    }
+
+    @keyframes baylen {
+        from {
+            transform: translateY(0);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(-120vh);
+            opacity: 1;
+        }
+    }
